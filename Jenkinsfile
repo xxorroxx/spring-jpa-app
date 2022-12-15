@@ -17,8 +17,10 @@ pipeline {
             - cat
             tty: true
           - name: docker
-            image: docker:alpine
-            command:
+            image: docker:dind
+            tty: true
+            securityContext:
+              privileged: true
         '''
     }
    }
