@@ -16,6 +16,11 @@ pipeline {
             command:
             - cat
             tty: true
+          - name: docker
+            image: docker:alpine
+            command:
+          - cat
+            tty: true
         '''
     }
    }
